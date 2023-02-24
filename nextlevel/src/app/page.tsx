@@ -5,5 +5,5 @@ import styles from "./page.module.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  return <h1 className="text-red-500">안녕하세요</h1>;
+  return <h1 className="text-red-500"></h1>;
 }
