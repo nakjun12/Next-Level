@@ -1,9 +1,18 @@
-import Image from "next/image";
 import { Inter } from "next/font/google";
-import styles from "./page.module.css";
-
+import Link from "next/link";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  return <h1 className="text-red-500"></h1>;
+  return (
+    <h1 style={inter.style} className="text-red-500">
+      <ul>
+        <li>
+          <Link href="/portfolio">portfolio</Link>
+        </li>
+        <li>
+          <Link href="/clients">Client</Link>
+        </li>
+      </ul>
+    </h1>
+  );
 }
