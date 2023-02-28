@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import fs, { fchmod } from "fs";
+import fs from "fs";
 import path from "path";
 
 export function buildFeedbackPath() {
@@ -36,6 +36,6 @@ export default function feedback(req: NextApiRequest, res: NextApiResponse) {
   } else {
     const filePath = buildFeedbackPath();
     const data = extractFeedback(filePath);
-    res.status(200).json({ feedback: data, message: "This works!" });
+    res.status(200).json({ feedback: data });
   }
 }
